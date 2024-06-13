@@ -1,0 +1,127 @@
+:root {
+    --color-gris-oscuro: hsl(0, 0%, 8%);
+    --color-gris-medio: hsl(0, 0%, 12%);
+    --color-gris-claro: hsl(0, 0%, 20%);
+    --color-verde-amarillo: hsl(75, 94%, 57%);
+    --color-blanco: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-gris-oscuro);
+    font-family: 'Inter', sans-serif;
+    color: var(--color-blanco);
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+.contenedor {
+    background-color: var(--color-gris-oscuro);
+    width: 100%;
+    height: 100%;
+    min-height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta {
+    background-color: var(--color-gris-medio);
+    height: auto;
+    width: 35%;
+    min-width: 300px;
+    max-width: 600px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-blanco);
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+.tarjeta img {
+    height: 20%;
+    border-radius: 50%;
+}
+
+.nombre {
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+.ubicacion {
+    color: var(--color-verde-amarillo);
+    font-weight: 600;
+}
+
+.descripcion {
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contenedorDeBotones {
+    width: 90%;
+    height: auto;
+}
+
+.boton {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 10px;
+    font-size: 14px;
+    height: 3rem;
+}
+
+.tarjeta button {
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    background-color: var(--color-gris-claro);
+    border: none;
+    margin-bottom: 1rem;
+    color: var(--color-blanco);
+    font-size: 14px;
+    transition-duration: 100ms;
+}
+
+.tarjeta button:hover {
+    background-color: var(--color-verde-amarillo);
+    color: var(--color-gris-oscuro);
+    cursor: pointer;
+}
+
+
+/* estilos para pantallas de telefonos moviles con maximo un ancho de 480px */
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    .tarjeta {
+        width: 80%;
+        height: 70%;
+        min-height: 500px;
+        max-height: 520px;
+    }
+}
+
+/* estilos para pantallas co un ancho mayor a 481px y maximo un ancho de 960px */
+@media screen and (min-width: 481px) and (max-width: 960px) {
+    .tarjeta {
+        width: 45%;
+        height: 60%;
+        min-height: 500px;
+        max-height: 520px;
+    }
+}
+/* estilos para pantallas co un ancho mayor a 961px*/
+@media screen and (min-width: 961px) {
+    .tarjeta {
+        width: 30%;
+        height: 50%;
+        min-height: 520px;
+        max-height: 550px;
+    }
+}
